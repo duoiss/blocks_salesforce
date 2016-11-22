@@ -182,6 +182,10 @@
     type: string
     sql: ${TABLE}.website
     
+  - dimension: duo_edition
+    type: string
+    sql: ${TABLE}.DUO_EDITION_C
+    
 # measures #
 
   - measure: count
