@@ -58,7 +58,6 @@
       sql_on: ${opportunity.owner_id} = ${opportunity_owner.id}
       relationship: many_to_one      
 
-
 - explore: opportunity
   sql_always_where: |
     NOT ${opportunity.is_deleted}
@@ -80,3 +79,8 @@
       from: user
       sql_on: ${opportunity.owner_id} = ${opportunity_owner.id}
       relationship: many_to_one
+      
+    - join: opportunity_line_item
+      sql_on: ${opportunity.id} = ${opportunity_line_item.opportunity_id}
+      relationship: one_to_many
+
