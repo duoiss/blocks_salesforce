@@ -200,7 +200,6 @@
     measures: [account.count_customers, opportunity_line_item.line_item_total]
     filters:
       account.market_segment: -Unknown
-      opportunity.stage_name: '"Closed Won"'
     sorts: [opportunity.close_month, account.market_segment, account.market_segment__sort_]
     limit: 500
     column_limit: 50
