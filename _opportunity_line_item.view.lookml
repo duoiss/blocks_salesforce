@@ -177,6 +177,8 @@
     type: count
     drill_fields: detail*
 
+  - measure: line_item_total
+    type: sum
 
   # ----- Sets of fields for drilling ------
   sets:
