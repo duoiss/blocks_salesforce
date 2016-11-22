@@ -185,6 +185,10 @@
   - dimension: duo_edition
     type: string
     sql: ${TABLE}.DUO_EDITION_C
+
+  - dimension: duo_edition
+    type: string
+    sql: ${TABLE}.MARKET_SEGMENT_C
     
 # measures #
 

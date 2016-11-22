@@ -14,7 +14,7 @@
       'Mid-Market': ${number_of_employees} BETWEEN 501 AND 1000
       'Enterprise': ${number_of_employees} > 1000
       else: 'Unknown'    
-
+   
 # measures #
 
   - measure: percent_of_accounts
