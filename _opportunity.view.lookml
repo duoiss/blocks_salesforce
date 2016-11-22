@@ -144,6 +144,10 @@
   - dimension: type
     type: string
     sql: ${TABLE}.type
+    
+  - dimension: amount_custom
+    type: number
+    sql: ${TABLE}.COPY_AMOUNT_C
 
 # measures #
 
