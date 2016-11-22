@@ -234,6 +234,7 @@
     filters:
       opportunity_owner.name: -NULL
       opportunity.count_won: '>0'
+      opportunity.close_date: this quarter
     sorts: [opportunity_owner.name desc]
     limit: 6
     query_timezone: America/Los_Angeles
