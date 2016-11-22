@@ -102,13 +102,13 @@
     type: looker_area
     model: salesforce
     explore: opportunity
-    dimensions: [opportunity.close_month, account.business_segment]
-    pivots: [account.business_segment]
+    dimensions: [opportunity.close_month, account.market_segment]
+    pivots: [account.market_segment]
     measures: [opportunity.count]
     filters:
       opportunity.close_month: before tomorrow
       opportunity.stage_name: '"Closed Won"'
-    sorts: [opportunity.close_month, account.business_segment, account.business_segment__sort_]
+    sorts: [opportunity.close_month, account.market_segment, account.market_segment__sort_]
     limit: 500
     column_limit: 50
     stacking: normal
@@ -135,15 +135,15 @@
     type: looker_donut_multiples
     model: salesforce
     explore: opportunity
-    dimensions: [account.business_segment, opportunity.forecast_category]
+    dimensions: [account.market_segment, opportunity.forecast_category]
     pivots: [opportunity.forecast_category]
     measures: [account.count]
     listen:
       state: account.billing_state
     filters:
-      account.business_segment: -Unknown
+      account.market_segment: -Unknown
       opportunity.stage_name: -%Closed%
-    sorts: [opportunity.close_month, account.business_segment, account.business_segment__sort_,
+    sorts: [opportunity.close_month, account.market_segment, account.market_segment__sort_,
       opportunity.forecast_category]
     limit: 500
     column_limit: 50
@@ -196,12 +196,12 @@
     type: looker_column
     model: salesforce
     explore: opportunity
-    dimensions: [account.business_segment]
+    dimensions: [account.market_segment]
     measures: [account.count_customers, opportunity.total_revenue]
     filters:
-      account.business_segment: -Unknown
+      account.market_segment: -Unknown
       opportunity.stage_name: '"Closed Won"'
-    sorts: [opportunity.close_month, account.business_segment, account.business_segment__sort_]
+    sorts: [opportunity.close_month, account.market_segment, account.market_segment__sort_]
     limit: 500
     column_limit: 50
     stacking: ''

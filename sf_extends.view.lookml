@@ -14,7 +14,17 @@
       'Mid-Market': ${number_of_employees} BETWEEN 501 AND 1000
       'Enterprise': ${number_of_employees} > 1000
       else: 'Unknown'    
-   
+      
+  - dimension: market_segment
+    type: string
+    sql_case:
+      'Personal': ${number_of_employees} BETWEEN 0 AND 1
+      'VSB': ${number_of_employees} BETWEEN 2 AND 500
+      'SMB': ${number_of_employees} BETWEEN 501 AND 2500
+      'Mid-Market': ${number_of_employees} BETWEEN 2501 AND 10000
+      'Enterprise': ${number_of_employees} > 10000
+      else: 'Unknown'    
+      
 # measures #
 
   - measure: percent_of_accounts
