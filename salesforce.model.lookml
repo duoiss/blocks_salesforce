@@ -81,6 +81,6 @@
       relationship: many_to_one
       
     - join: opportunity_line_item
-      sql_on: ${opportunity.id} = ${opportunity_line_item.opportunity_id}
+      sql_on: ${opportunity.id} = ${opportunity_line_item.opportunity_id} AND NOT ${opportunity_line_item.is_deleted}
       relationship: one_to_many
 
