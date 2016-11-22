@@ -186,6 +186,10 @@
     type: string
     sql: ${TABLE}.DUO_EDITION_C
     
+  - dimension: employee_bucket
+    type: string
+    sql: ${TABLE}.EMPLOYEE_BUCKET_C
+    
 # measures #
 
   - measure: count
