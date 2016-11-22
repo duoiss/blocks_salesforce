@@ -21,7 +21,7 @@
     listen:
       state: account.billing_state
     filters:
-      account.type: '"Customer"'
+      account.type: '"Paying"'
     sorts: [account.count desc]
     font_size: medium
     text_color: '#49719a'
