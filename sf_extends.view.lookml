@@ -18,11 +18,14 @@
   - dimension: market_segment
     type: string
     sql_case:
-      'Personal': ${employee_bucket} BETWEEN 0 AND 1
-      'VSB': ${employee_bucket} BETWEEN 2 AND 500
-      'SMB': ${employee_bucket} BETWEEN 501 AND 2500
-      'Mid-Market': ${employee_bucket} BETWEEN 2501 AND 10000
-      'Enterprise': ${employee_bucket} > 10000
+      'Personal': ${employee_bucket} = ''
+      'VSB': ${employee_bucket} '2-10'
+      'VSB': ${employee_bucket} '11-50'
+      'VSB': ${employee_bucket} '51-500'
+      'SMB': ${employee_bucket} '501-2500'
+      'Mid-Market': ${employee_bucket} '2501-5000'
+      'Mid-Market': ${employee_bucket} '5001-10000'
+      'Enterprise': ${employee_bucket} '10000+'
       else: 'Unknown'    
       
 # measures #
