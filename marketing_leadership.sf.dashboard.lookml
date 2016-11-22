@@ -235,7 +235,7 @@
       opportunity_owner.name: -NULL
       opportunity.count_won: '>0'
     sorts: [opportunity_owner.name desc]
-    limit: 12
+    limit: 6
     query_timezone: America/Los_Angeles
     stacking: ''
     colors: ['#635189', '#b3a0dd']
