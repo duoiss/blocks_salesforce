@@ -19,12 +19,9 @@
     type: string
     sql_case:
       'Personal': ${employee_bucket} = 'Personal'
-      'VSB': ${employee_bucket} = '2-10'
-      'VSB': ${employee_bucket} = '11-50'
-      'VSB': ${employee_bucket} = '51-500'
+      'VSB': ${employee_bucket} IN ('2-10','11-50','51-500')
       'SMB': ${employee_bucket} = '501-2500'
-      'Mid-Market': ${employee_bucket} = '2501-5000'
-      'Mid-Market': ${employee_bucket} = '5001-10000'
+      'Mid-Market': ${employee_bucket} IN ('2501-5000','5001-10000')
       'Enterprise': ${employee_bucket} = '10000+'
       else: 'Unknown'    
       
