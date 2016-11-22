@@ -1,5 +1,5 @@
 - view: _contact
-  sql_table_name: salesforce._contact
+  sql_table_name: salesforce.contact
   fields:
 
 # dimensions #

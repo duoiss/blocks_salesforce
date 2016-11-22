@@ -1,5 +1,5 @@
 - view: _opportunity
-  sql_table_name: salesforce._opportunity
+  sql_table_name: salesforce.opportunity
   fields:
 
 # dimensions #

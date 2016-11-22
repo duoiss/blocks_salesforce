@@ -1,5 +1,5 @@
 - view: _campaign
-  sql_table_name: salesforce._campaign
+  sql_table_name: salesforce.campaign
   fields:
 
 # dimensions #

@@ -1,5 +1,5 @@
 - view: _account
-  sql_table_name: salesforce._account
+  sql_table_name: salesforce.account
   fields:
 
 # dimensions #
