@@ -18,7 +18,7 @@
   - dimension: market_segment
     type: string
     sql_case:
-      'Personal': ${employee_bucket} = ''
+      'Personal': ${employee_bucket} = 'Personal'
       'VSB': ${employee_bucket} = '2-10'
       'VSB': ${employee_bucket} = '11-50'
       'VSB': ${employee_bucket} = '51-500'
