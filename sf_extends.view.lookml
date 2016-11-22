@@ -37,7 +37,7 @@
   - measure: count_customers
     type: count
     filters:
-      account.type: '"Customer"'
+      account.type: '"Paying"'
     
     
 - view: lead
