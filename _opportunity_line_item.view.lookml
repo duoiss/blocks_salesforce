@@ -179,6 +179,7 @@
 
   - measure: line_item_total
     type: sum
+    sql: ${TABLE}.TOTAL_PRICE
 
   # ----- Sets of fields for drilling ------
   sets:
