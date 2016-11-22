@@ -232,7 +232,6 @@
       opportunity.type: '"New Business"'
     drill_fields: [opportunity.id, account.name, type]   
   
-  
 - view: campaign
   extends: _campaign
   

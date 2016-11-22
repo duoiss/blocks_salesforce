@@ -7,10 +7,6 @@
     type: string
     sql: ${TABLE}.ID
 
-  - dimension: _fivetran_synced
-    type: string
-    sql: ${TABLE}._FIVETRAN_SYNCED
-
   - dimension: ava_sfcore_details_c
     type: string
     sql: ${TABLE}.AVA_SFCORE_DETAILS_C
@@ -179,10 +175,6 @@
 #measures
   - measure: count
     type: count
-    drill_fields: detail*
-  
-  - measure: sum_total_price
-    type: sum
     drill_fields: detail*
 
 
