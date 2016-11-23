@@ -193,9 +193,11 @@
     type: number
     sql: ${TABLE}.LAST_MONTH_AUTHS_C
 
-  - dimension: last_authentication
-    type: number
-    sql: ${TABLE}.LAST_AUTHENTICATION_C  
+  - dimension_group: last_authentication
+    type: time
+    timeframes: [date, week, month]
+    convert_tz: false
+    sql: ${TABLE}.LAST_AUTHENTICATION_C
     
   - dimension: num_of_child_accounts
     type: number
