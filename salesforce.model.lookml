@@ -25,6 +25,11 @@
       from: user
       sql_on: ${account.owner_id} = ${account_owner.id}
       relationship: many_to_one
+      
+    - join: case
+      from: case
+      sql_on: ${account.id} = ${case.account_id}
+      relationship: one_to_many
 
 - explore: case
   sql_always_where: |
