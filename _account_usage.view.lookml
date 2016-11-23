@@ -35,7 +35,7 @@
     type: number
     sql: ${TABLE}.ADMINISTRATORS_USING_PUSH_C
 
-  - dimension: allowed_android_versions_c
+  - dimension: allowed_android_versions
     type: string
     sql: ${TABLE}.ALLOWED_ANDROID_VERSIONS_C
 
@@ -99,73 +99,73 @@
     type: number
     sql: ${TABLE}.DEVICE_INSIGHT_OTHER_C
 
-  - dimension: device_insight_windows_phone_c
+  - dimension: device_insight_windows_phone
     type: number
     sql: ${TABLE}.DEVICE_INSIGHT_WINDOWS_PHONE_C
 
-  - dimension: duo_account_name_c
+  - dimension: duo_account_name
     type: string
     sql: ${TABLE}.DUO_ACCOUNT_NAME_C
 
-  - dimension_group: duo_care_end_date_c
+  - dimension_group: duo_care_end_date
     type: time
     timeframes: [date, week, month]
     convert_tz: false
     sql: ${TABLE}.DUO_CARE_END_DATE_C
 
-  - dimension: duo_deleted_c
+  - dimension: duo_deleted
     type: yesno
     sql: ${TABLE}.DUO_DELETED_C
 
-  - dimension: duo_directories_syncing_c
+  - dimension: duo_directories_syncing
     type: number
     sql: ${TABLE}.DUO_DIRECTORIES_SYNCING_C
 
-  - dimension: duo_edition_c
+  - dimension: duo_edition
     type: string
     sql: ${TABLE}.DUO_EDITION_C
 
-  - dimension: duo_enabled_methods_c
+  - dimension: duo_enabled_methods
     type: string
     sql: ${TABLE}.DUO_ENABLED_METHODS_C
 
-  - dimension: duo_enrollment_module_c
+  - dimension: duo_enrollment_module
     type: string
     sql: ${TABLE}.DUO_ENROLLMENT_MODULE_C
 
-  - dimension_group: duo_invoice_end_c
+  - dimension_group: duo_invoice_end
     type: time
     timeframes: [date, week, month]
     convert_tz: false
     sql: ${TABLE}.DUO_INVOICE_END_C
 
-  - dimension_group: duo_invoice_start_c
+  - dimension_group: duo_invoice_start
     type: time
     timeframes: [date, week, month]
     convert_tz: false
     sql: ${TABLE}.DUO_INVOICE_START_C
 
-  - dimension: duo_labs_enabled_c
+  - dimension: duo_labs_enabled
     type: string
     sql: ${TABLE}.DUO_LABS_ENABLED_C
 
-  - dimension: duo_payment_type_c
+  - dimension: duo_payment_type
     type: string
     sql: ${TABLE}.DUO_PAYMENT_TYPE_C
 
-  - dimension: duo_plan_users_c
+  - dimension: duo_plan_users
     type: number
     sql: ${TABLE}.DUO_PLAN_USERS_C
 
-  - dimension: duo_trial_end_c
+  - dimension: duo_trial_end
     type: string
     sql: ${TABLE}.DUO_TRIAL_END_C
 
-  - dimension: duo_trial_start_c
+  - dimension: duo_trial_start
     type: string
     sql: ${TABLE}.DUO_TRIAL_START_C
 
-  - dimension: i_os_c
+  - dimension: ios
     type: string
     sql: ${TABLE}.I_OS_C
 
