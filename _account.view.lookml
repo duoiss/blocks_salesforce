@@ -182,6 +182,10 @@
     type: string
     sql: ${TABLE}.website
     
+  - dimension:  akey
+    type: string
+    sql: ${TABLE}.akey_c
+    
   - dimension: duo_edition
     type: string
     sql: ${TABLE}.DUO_EDITION_C
