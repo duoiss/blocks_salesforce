@@ -2,6 +2,10 @@
   sql_table_name: SALESFORCE.ACCOUNT
   fields:
   
+  - dimension: id
+    type: number
+    sql: ${TABLE}.id
+  
   - dimension: akey
     type: string
     sql: ${TABLE}.AKEY_C
@@ -164,10 +168,6 @@
   - dimension: i_os_c
     type: string
     sql: ${TABLE}.I_OS_C
-
-  - dimension: id
-    type: string
-    sql: ${TABLE}.ID
 
   - dimension: integration_type
     type: string
