@@ -193,6 +193,10 @@
     type: number
     sql: ${TABLE}.LAST_MONTH_AUTHS_C
 
+  - dimension: last_authentication
+    type: number
+    sql: ${TABLE}.LAST_AUTHENTICATION_C  
+    
   - dimension: num_of_child_accounts
     type: number
     sql: ${TABLE}.NUM_OF_CHILD_ACCOUNTS_C
