@@ -26,6 +26,9 @@
       sql_on: ${account.owner_id} = ${account_owner.id}
       relationship: many_to_one
 
+- explore: case
+  sql_always_where: |
+    NOT ${case.is_deleted}
 
 - explore: lead
   sql_always_where: |
