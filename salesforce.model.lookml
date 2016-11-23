@@ -26,10 +26,17 @@
       sql_on: ${account.owner_id} = ${account_owner.id}
       relationship: many_to_one
       
+    - join: account_usage
+      from: account_usage
+      sql_on: ${account.akey} = ${account_usage.akey}
+      relationship: one_to_one
+    
     - join: case
       from: case
       sql_on: ${account.id} = ${case.account_id}
       relationship: one_to_many
+      
+    
 
 - explore: case
   sql_always_where: |
