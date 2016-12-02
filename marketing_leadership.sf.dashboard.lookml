@@ -52,6 +52,7 @@
     filters:
       opportunity.close_date: this quarter
       opportunity.stage_name: '"Closed Won"'
+      opportunity.stage_name: '"Closed Won (booked)"'
     sorts: [opportunity.average_deal_size desc]
     font_size: medium
     text_color: black
