@@ -36,7 +36,7 @@
     measures: [opportunity.total_revenue]
     filters:
       opportunity.close_date: this quarter
-      opportunity.stage_name: '"Closed Won"'
+      opportunity.stage_name: Closed Won, Closed Won (booked)
     sorts: [opportunity.total_revenue desc]
     font_size: medium
     text_color: black
