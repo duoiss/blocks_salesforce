@@ -51,7 +51,7 @@
     measures: [opportunity.average_deal_size]
     filters:
       opportunity.close_date: this quarter
-      opportunity.stage_name: IN ('"Closed Won"','"Closed Won (booked)"')
+      opportunity.stage_name: Closed Won,Closed Won (booked)
     sorts: [opportunity.average_deal_size desc]
     font_size: medium
     text_color: black
