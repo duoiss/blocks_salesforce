@@ -12,7 +12,8 @@
     sql: ${TABLE}.CREATED_BY_ID
 
   - dimension: created_date
-    type: string
+    type: time
+    timeframes: [time, date, week, month]
     sql: ${TABLE}.CREATED_DATE
 
   - dimension: field
