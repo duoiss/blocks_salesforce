@@ -36,7 +36,9 @@
       sql_on: ${account.id} = ${case.account_id}
       relationship: one_to_many
       
-    
+    - join: account_history
+      sql_on: ${account.id} = ${account_history.account_id}
+      relationship: one_to_many
 
 - explore: case
   sql_always_where: |
@@ -97,4 +99,8 @@
       
     - join: opportunity_line_item
       sql_on: ${opportunity.id} = ${opportunity_line_item.opportunity_id} AND NOT ${opportunity_line_item.is_deleted}
+      relationship: one_to_many
+      
+    - join: opportunity_history
+      sql_on: ${opportunity.id} = ${opportunity_history.opportunity_id}
       relationship: one_to_many
