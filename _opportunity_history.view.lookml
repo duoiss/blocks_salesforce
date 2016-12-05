@@ -25,7 +25,7 @@
     sql: ${TABLE}.IS_DELETED
 
   - dimension: new_value
-    type: string
+    type: number
     sql: ${TABLE}.NEW_VALUE
 
   - dimension: old_value
