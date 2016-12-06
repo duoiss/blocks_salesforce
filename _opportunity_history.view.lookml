@@ -29,7 +29,7 @@
     sql: ${TABLE}.NEW_VALUE
 
   - dimension: old_value
-    type: string
+    type: number
     sql: ${TABLE}.OLD_VALUE
 
   - dimension: opportunity_id
