@@ -8,6 +8,8 @@
 # views to explore——i.e., "base views" #
 
 - explore: account
+  sql_always_where: |
+    NOT ${account.is_deleted}
   fields: [ALL_FIELDS*,-account_owner.opportunity_set*,-creator.opportunity_set*]
   joins:
     - join: contact
