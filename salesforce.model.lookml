@@ -41,8 +41,8 @@
       relationship: one_to_many
       
     - join: opportunity
-      sql_on: ${account.id} = ${opportunity.account_id} = 
-      relationship: one_to_many
+      sql_on: ${opportunity.account_id} = ${account.id}
+      relationship: many_to_one
 
 - explore: case
   sql_always_where: |
