@@ -39,6 +39,10 @@
     - join: account_history
       sql_on: ${account.id} = ${account_history.account_id}
       relationship: one_to_many
+      
+    - join: opportunity
+      sql_on: ${account.id} = ${opportunity.account_id} = 
+      relationship: one_to_many
 
 - explore: case
   sql_always_where: |
