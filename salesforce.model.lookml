@@ -94,7 +94,7 @@
       
     - join: user_role
       from: user_role
-      sql_on: ${id} = ${account_owner.user_role_id}
+      sql_on: ${user_role.id} = ${account_owner.user_role_id}
       relationship: one_to_one
 
     - join: campaign
