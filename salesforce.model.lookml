@@ -26,6 +26,11 @@
       sql_on: ${account.owner_id} = ${account_owner.id}
       relationship: many_to_one
       
+    - join: account_owner_role
+      from: user_role
+      sql_on: ${account_owner_role.id} = ${account_owner.user_role_id}
+      relationship: one_to_one      
+      
     - join: account_usage
       from: account_usage
       sql_on: ${account.id} = ${account_usage.id}
@@ -101,9 +106,9 @@
       sql_on: ${opportunity.owner_id} = ${opportunity_owner.id}
       relationship: many_to_one
 
-    - join: user_role
+    - join: opportunity_owner_role
       from: user_role
-      sql_on: ${user_role.id} = ${opportunity_owner.user_role_id}
+      sql_on: ${opportunity_owner_role.id} = ${opportunity_owner.user_role_id}
       relationship: one_to_one
       
     - join: opportunity_line_item
