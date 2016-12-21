@@ -205,6 +205,10 @@
   - dimension: name
     type: string
     sql: ${TABLE}.name
+    
+  - dimension: region
+    type: string
+    sql: ${TABLE}.USER_REGION_C  
 
   - dimension_group: offline_pda_trial_expiration
     type: time
