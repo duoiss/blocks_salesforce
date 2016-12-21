@@ -91,6 +91,11 @@
       from: user
       sql_on: ${account.owner_id} = ${account_owner.id}
       relationship: many_to_one 
+      
+    - join: user_role
+      from: user_role
+      sql_on: ${id} = ${account_owner.user_role_id}
+      relationship: one_to_one
 
     - join: campaign
       sql_on: ${opportunity.campaign_id} = ${campaign.id}
