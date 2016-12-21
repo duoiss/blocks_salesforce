@@ -91,11 +91,6 @@
       from: user
       sql_on: ${account.owner_id} = ${account_owner.id}
       relationship: many_to_one 
-      
-    - join: user_role
-      from: user_role
-      sql_on: ${user_role.id} = ${account_owner.user_role_id}
-      relationship: one_to_one
 
     - join: campaign
       sql_on: ${opportunity.campaign_id} = ${campaign.id}
@@ -105,6 +100,11 @@
       from: user
       sql_on: ${opportunity.owner_id} = ${opportunity_owner.id}
       relationship: many_to_one
+
+    - join: user_role
+      from: user_role
+      sql_on: ${user_role.id} = ${opportunity_owner.user_role_id}
+      relationship: one_to_one
       
     - join: opportunity_line_item
       sql_on: ${opportunity.id} = ${opportunity_line_item.opportunity_id} AND NOT ${opportunity_line_item.is_deleted}
