@@ -9,6 +9,10 @@
     primary_key: true
     sql: ${TABLE}.id
     
+  - dimension: is_admin
+    type: yesno
+    sql: ${TABLE}.admin_c
+    
   - dimension: account_id
     type: string
     hidden: true
