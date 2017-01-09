@@ -118,3 +118,12 @@
     - join: opportunity_history
       sql_on: ${opportunity.id} = ${opportunity_history.opportunity_id}
       relationship: one_to_many
+      
+      
+- explore: contact
+  sql_always_where: |
+    NOT ${contact.is_deleted}
+  joins:
+    - join: account
+      sql_on: ${contact.account_id} = ${account.id}
+      relationship: many_to_one
