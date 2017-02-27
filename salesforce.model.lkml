@@ -167,8 +167,4 @@ explore: tpcustomers {
     relationship: one_to_one
   }
 
-  join: account {
-    sql_on: ${account.domain} = ${tpadmins.domain}  ;;
-    relationship: one_to_many
-  }
 }
