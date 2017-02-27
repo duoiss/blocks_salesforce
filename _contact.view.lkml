@@ -233,7 +233,6 @@ view: _contact {
 
   dimension: owner_id {
     type: string
-    hidden: yes
     sql: ${TABLE}.owner_id ;;
   }
 
