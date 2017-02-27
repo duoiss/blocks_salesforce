@@ -167,4 +167,13 @@ explore: tpcustomers {
     relationship: one_to_one
   }
 
+  join: account {
+    sql_on: ${tpcustomers.akey} = ${account.akey};;
+    relationship: one_to_one
+  }
+
+  join: contact {
+    sql_on: ${account.id} = ${contact.account_id} ;;
+    relationship: one_to_many
+  }
 }
