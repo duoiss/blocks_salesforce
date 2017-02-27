@@ -154,3 +154,15 @@ explore: contact {
     relationship: many_to_one
   }
 }
+
+explore: tpcustomers {
+  join: tpadmins {
+    sql_on: ${tpadmins.akey} = ${tpcustomers.akey} ;;
+    relationship: many_to_one
+  }
+
+  join: tpmilestones {
+    sql_on: ${tpmilestones.akey} = ${tpcustomers.akey} ;;
+    relationship: one_to_one
+  }
+}

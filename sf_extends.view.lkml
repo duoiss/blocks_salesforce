@@ -4,6 +4,10 @@ include: "_campaign.view.lkml"
 include: "_opportunity.view.lkml"
 include: "_lead.view.lkml"
 include: "_account.view.lkml"
+include: "_tpadmins.view.lkml"
+include: "_tpcustomers.view.lkml"
+include: "_tpmilestones.view.lkml"
+
 view: account {
   extends: [_account]
   # dimensions #
@@ -465,4 +469,16 @@ view: contact {
       {{ linked_value }}
       ;;
   }
+}
+
+view: tpadmins {
+  extends: [_tpadmins]
+}
+
+view: tpcustomers {
+  extends: [_tpcustomers]
+}
+
+view: tpmilestones {
+  extends: [_tpmilestones]
 }
