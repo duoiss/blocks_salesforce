@@ -42,6 +42,11 @@ view: _tpadmins {
     sql: ${TABLE}.UPDATED_ON ;;
   }
 
+  dimension: domain {
+    type: string
+    sql: split_part(${email}, '@', 2) ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [adminname]

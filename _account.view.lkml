@@ -221,6 +221,11 @@ view: _account {
     sql: ${TABLE}.website ;;
   }
 
+  dimension: domain {
+    type: string
+    sql: SUBSTRING(LEFT(url, LOCATE('/', ${website}, 8) - 1), 8) ;;
+  }
+
   dimension: akey {
     type: string
     sql: ${TABLE}.akey_c ;;
