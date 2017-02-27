@@ -156,6 +156,7 @@ explore: contact {
 }
 
 explore: tpcustomers {
+
   join: tpadmins {
     sql_on: ${tpadmins.akey} = ${tpcustomers.akey} ;;
     relationship: many_to_one
@@ -164,5 +165,10 @@ explore: tpcustomers {
   join: tpmilestones {
     sql_on: ${tpmilestones.akey} = ${tpcustomers.akey} ;;
     relationship: one_to_one
+  }
+
+  join: account {
+    sql_on: ${account.domain} = ${tpadmins.domain}  ;;
+    relationship: one_to_many
   }
 }
